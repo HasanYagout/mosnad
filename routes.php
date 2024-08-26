@@ -1,8 +1,6 @@
 <?php
 
 
-
-
 $router->get('/','controllers/index.php');
 $router->post('/comment/store','controllers/comment/store.php');
 $router->post('/comment','controllers/comment/comment.php');

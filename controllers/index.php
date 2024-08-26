@@ -4,6 +4,7 @@ $config= require base_path('config.php');
 $database=new \Core\Database($config['database']);
 $products=$database->query('select * from products')->get();
 $comments=$database->query('select * from comments')->get();
+
 $averageRatings = [];
 foreach ($products as $product) {
     $productId = $product['id'];
@@ -19,4 +20,4 @@ foreach ($products as $product) {
     $averageRatings[$productId] = $averageRating;
 }
 
-require view('index.php',['products'=>$products,'comments'=>$comments,'averageRatings'=>$averageRatings]);
+require view('index.php',['products'=>$products,'commentsCount'=>$commentsCount,'comments'=>$comments,'averageRatings'=>$averageRatings]);
