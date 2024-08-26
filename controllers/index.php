@@ -20,4 +20,4 @@ foreach ($products as $product) {
     $averageRatings[$productId] = $averageRating;
 }
 
-require view('index.php',['products'=>$products,'commentsCount'=>$commentsCount,'comments'=>$comments,'averageRatings'=>$averageRatings]);
+require view('index.php',['products'=>$products,'comments'=>$comments,'averageRatings'=>$averageRatings]);
